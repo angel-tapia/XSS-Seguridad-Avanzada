@@ -1,0 +1,63 @@
+<ion-content>
+    <ion-grid> <!-- Historias del Feed: -->
+        <ion-row>
+            <ion-col size-md="8" offset-md="2">
+                <app-historias></app-historias>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+   <ion-grid mode="ios"> <!-- Publicaciones del Feed: -->
+        <!--El primer elemento del ngFor (quinti) es el identificador con el que haremos referencia a alguno de los atributos o elementos del arreglo.-->
+        <!--El segundo elemento del ngFor (quintillizas) es el arreglo que estamos haciendo referencia y queremos recorrer.-->
+        <ion-row *ngFor="let quinti of quintillizas">
+            <ion-col>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-grid>
+                            <ion-row aria-setsize="0">
+                                <ion-col size="9.9">
+                                    <div class="usuario-card-header">    
+                                        <ion-avatar>
+                                            <img src="{{quinti.src}}">
+                                        </ion-avatar>
+                                        <ion-label class="label"><strong>{{quinti.usuario}}</strong></ion-label>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <img src="{{quinti.src}}" alt="" width="300px" [routerLink]="['/publicacion', quinti.id]" class="tamanoimagen">
+                        <p class="caption">{{quinti.caption}}</p>
+                        <div class="opciones">
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col size="2" class="izquierda">
+                                        <ion-button fill="translucent">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </ion-button>
+                                    </ion-col>
+                                    <ion-col size="2">
+                                        <ion-button fill="translucent">
+                                            <ion-icon name="chatbubble-outline"></ion-icon>
+                                        </ion-button>
+                                    </ion-col>
+                                    <ion-col size="2">
+                                        <ion-button fill="translucent">
+                                            <ion-icon name="paper-plane-outline"></ion-icon>
+                                        </ion-button>
+                                    </ion-col>
+                                    <ion-col size="2">
+                                        <ion-button fill="translucent">
+                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                        </ion-button>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

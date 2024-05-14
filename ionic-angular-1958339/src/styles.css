@@ -1,0 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+/*Hoja de estilos global, se lo aplica a todos los componentes*/ 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}

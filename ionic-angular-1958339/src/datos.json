@@ -1,0 +1,65 @@
+{
+    "usuario" : {
+        "nombre" : "",
+        "usuario": "@nakano428",
+        "bio": "五等分の花嫁",
+        "posts": 6,
+        "followers": "19,428",
+        "following": 6,
+        "fotodeperfil": "assets/imagenes/miku.png",
+        "publicaciones": [
+            {
+                "id" : "I1",
+                "imagen" : "assets/imagenes/ichika2.jpg"
+              },
+              {
+                "id" : "N1",
+                "imagen" : "assets/imagenes/nino2.jpg"
+              },
+              {
+                "id" : "M1",
+                "imagen" : "assets/imagenes/miku2.jpg"
+              },
+              {
+                "id" : "Y1",
+                "imagen" : "assets/imagenes/yotsuba2.png"
+              },
+              {
+                "id" : "K1",
+                "imagen" : "assets/imagenes/itsuki2.jpg"
+              },
+              {
+                "id" : "U1",
+                "imagen" : "assets/imagenes/rena.jpg"
+              }
+        ] 
+      },
+
+      "quintillizas" : [
+        {
+          "usuario": "@mybelovedichika",
+          "src": "assets/imagenes/ichika.jpg",
+          "caption": "Actriz profesional"
+        },
+        {
+          "usuario": "@nakanonino",
+          "src": "assets/imagenes/nino.jpg",
+          "caption": "Chef profesional"
+        },
+        {
+          "usuario": "@nakanomiku",
+          "src": "assets/imagenes/miku.jpg",
+          "caption": "Panadera profesional"
+        },
+        {
+          "usuario": "@nakanoyotsuba",
+          "src": "assets/imagenes/yotsuba.jpg",
+          "caption": "Deportista profesional"
+        },
+        {
+          "usuario": "@nakanoitsuki",
+          "src": "assets/imagenes/itsuki.jpg",
+          "caption": "Maestra profesional"
+        }
+      ]
+}

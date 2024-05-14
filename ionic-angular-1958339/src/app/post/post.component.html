@@ -1,0 +1,20 @@
+<ion-grid mode="ios">
+    <ion-row>
+        <ion-col size-md="12">
+            <ion-card>
+                <ion-card-content>
+                    <form #F="ngForm" (ngSubmit)="upload(F)">
+                        <ion-label>Usuario: </ion-label>
+                        <ion-input placeholder="Insert user here" name="user" [(ngModel)]="user"></ion-input>
+                        <ion-label class="caption"><strong>Caption: </strong></ion-label>
+                        <ion-input placeholder="Insert caption here" name="caption" [(ngModel)]="caption" class="caption"></ion-input>
+                        <ion-label class="caption">Source: </ion-label> 
+                        <ion-input placeholder="Insert source here" name="src" [(ngModel)]="src" class="caption"></ion-input>
+                        <ion-button type="submit" color="dark"><strong>Submit</strong></ion-button>
+                    </form>     
+                    <ion-button type="submit" color="dark" (click)="takePhoto()" class="bajar"><strong>Abrir Cámara</strong></ion-button>                       
+                </ion-card-content>                
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

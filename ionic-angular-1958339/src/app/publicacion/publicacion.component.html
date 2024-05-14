@@ -1,0 +1,68 @@
+<ion-content>
+    <ion-card mode="ios">
+        <ion-card-header>
+            <ion-grid>
+                <ion-row class="align" aria-setsize="0">
+                    <ion-col size="9.9" class="usuario-card-header">
+                        <img *ngIf="clickP" src="{{usuario.fotodeperfil}}"  class="imagendeperfil">
+                        <img *ngIf="clickQ" src="{{publicacionImprimir.src}}" class="imagendeperfil">
+                        <strong *ngIf="clickP" class="strong">{{usuario.usuario}}</strong>
+                        <strong *ngIf="clickQ" class="strong">{{publicacionImprimir.usuario}}</strong>
+                    </ion-col>
+                    <ion-col size="1">
+                        <ion-button fill="translucent" id="trigger-popup--{{publicacion}}">
+                            <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                        </ion-button>
+                        <ion-popover trigger="trigger-popup--{{publicacion}}">
+                            <ng-template>
+                                <app-popover></app-popover>
+                            </ng-template>
+                        </ion-popover>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-header>
+        <ion-card-content>
+            <img [src]="publicacionImprimir.imagen" alt="" class="tamanoimagen">
+            <img [src]="publicacionImprimir.src" alt="" class="tamanoimagen">
+            <p class="caption">{{publicacionImprimir.caption}}</p>
+        </ion-card-content>
+        <div>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="1">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col size="1">
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col size="1">
+                        <ion-icon name="paper-plane-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col size="1" offset="8">
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </ion-card>
+    <ion-card *ngIf="editando" mode="ios"> <!--Carta que aparece sólo cuando se va a editar al alumno.-->
+        <ion-card-header><h4><strong>Editar Caption</strong></h4></ion-card-header>
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="6">
+                        <ion-label>
+                            <strong>Caption:</strong>
+                        </ion-label>
+                    </ion-col>
+                    <ion-col size="8">
+                        <ion-input [(ngModel)]="quintiNuevosDatos.caption" class="input"></ion-input>
+                    </ion-col>
+                <ion-button (click)="guardar()" color="dark">Guardar</ion-button>
+                <ion-button (click)="cancelar()" color="dark">Cancelar</ion-button>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,10 @@
+.login{
+    display: flex;
+    align-items: center;
+}
+
+ion-button{
+    display: flex;
+    color: white;
+    align-items: center;
+}

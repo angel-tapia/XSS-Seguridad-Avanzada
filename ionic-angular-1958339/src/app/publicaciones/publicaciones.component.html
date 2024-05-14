@@ -1,0 +1,7 @@
+<ion-grid mode="ios"> <!--Muestreo de publicaciones del perfil-->
+    <ion-row>
+        <ion-col *ngFor="let post of publicaciones" size="4">
+            <img [src]="post.imagen" alt="" class="tamanoimagen" [routerLink]="['/publicacion', post.indice]">
+        </ion-col>
+    </ion-row>
+</ion-grid>

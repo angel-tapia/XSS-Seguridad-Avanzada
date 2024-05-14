@@ -1,0 +1,8 @@
+.tamanoimagen{
+    position: relative;
+    border-radius: 15px;
+}
+
+ion-content::part(background){
+    background: #ffffff !important;
+}

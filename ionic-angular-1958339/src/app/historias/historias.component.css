@@ -1,0 +1,12 @@
+.historias-container {
+    width: 360px;   
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: rgb(219, 219, 219);
+}
+
+ion-avatar{
+    width: 48px;
+    height: 48px;
+    border: 1.5px solid rgb(246, 184, 182);
+}

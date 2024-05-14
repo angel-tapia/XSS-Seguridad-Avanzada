@@ -1,0 +1,13 @@
+ion-button{
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.caption{
+    color: darkgray;
+}
+
+.bajar{
+    margin-top: 15px;
+}

@@ -1,0 +1,6 @@
+{
+	"appId": "com.quintillizas.emi",
+	"appName": "Quinstagram",
+	"webDir": "dist/app",
+	"bundledWebRuntime": false
+}

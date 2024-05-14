@@ -1,0 +1,14 @@
+<ion-grid>
+    <ion-row class="historias-container">
+        <ion-col *ngFor="let quinti of quintillizas; let id = index">
+            <ion-avatar>
+                <ion-img src="{{quinti.src}}" id="foto-usuario--{{id}}"></ion-img>
+                <ion-modal trigger="foto-usuario--{{id}}">
+                    <ng-template>
+                        <app-historias-detalle></app-historias-detalle>
+                    </ng-template>
+                </ion-modal>
+            </ion-avatar>
+        </ion-col>
+    </ion-row>
+</ion-grid>

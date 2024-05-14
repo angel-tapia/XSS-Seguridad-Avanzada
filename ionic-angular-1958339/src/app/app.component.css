@@ -1,0 +1,42 @@
+.alinear{
+    margin-top: 10px;
+    margin-left: 7px;
+}
+
+ion-avatar{
+    width: 20px;
+    height: 20px;
+}
+
+ion-img{
+    margin-right: 100px;
+}
+
+.container ion-label {
+    text-align: left;
+    flex: 1 0 80%;
+}
+
+#trigger-notificaciones {
+    height: 2em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto 0.35fr auto auto;
+    align-items: center;
+  }
+  
+  .buscador {
+    text-align: left;
+  }
+
+.perfil, .notificaciones {
+    flex: 1 0 auto;
+}
+
+ion-button{
+    display: flex;
+    color: rgb(255, 0, 0);
+    align-items: center;
+}

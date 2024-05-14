@@ -1,0 +1,40 @@
+<ion-content mode="ios">
+    <ion-grid>
+        <ion-row>
+            <ion-col size="4">
+                <img [src]=usuario.fotodeperfil alt="" class="fotoperfil">
+            </ion-col>
+            <ion-col>            
+                <p class="textocentrado"><strong>{{usuario.posts}}</strong></p>
+                <p class="textocentrado">Posts</p>
+            </ion-col>
+            <ion-col>
+                <p class="textocentrado"><strong>{{usuario.followers}}</strong></p>
+                <p class="textocentrado">Followers</p>
+            </ion-col>
+            <ion-col>
+                <p class="textocentrado"><strong>{{usuario.following}}</strong></p>
+                <p class="textocentrado">Following</p>
+            </ion-col>
+        </ion-row>
+        <ion-row class="gridperfil">
+            <ion-col>            
+                <strong>{{usuario.usuario}}</strong>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="col">
+                {{usuario.bio}}
+                <ion-button class="buttonalign" color="dark" (click)="toggleEditar()">
+                    Editar Perfil
+                </ion-button>
+            </ion-col>          
+        </ion-row>
+        <ion-row *ngIf="editando">        
+            <ion-input [(ngModel)]="bio" class="borde-input"></ion-input>
+            <ion-button (click)="toggleEditar()" color="dark">Cancelar</ion-button>
+            <ion-button (click)="guardarBio()" color="dark">Guardar</ion-button>
+        </ion-row>
+    </ion-grid>
+    <app-publicaciones></app-publicaciones>
+</ion-content>

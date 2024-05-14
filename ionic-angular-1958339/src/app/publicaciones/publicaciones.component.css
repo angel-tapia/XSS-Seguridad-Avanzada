@@ -1,0 +1,11 @@
+.tamanoimagen{
+    position: relative;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+}
+
+ion-grid{
+    background: #ffffff !important;
+}
