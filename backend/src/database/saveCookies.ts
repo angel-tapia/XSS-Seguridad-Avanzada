@@ -20,16 +20,17 @@ export const saveCookiesApp = async (instance: FastifyInstance) => {
   const app = initializeApp(firebaseConfig);
   const database = getDatabase(app);
 
-  instance.post(`${contextRoute}`, async (request, reply) => {
-    const data = request.body as any;
+  instance.get(`${contextRoute}/:text`, async (request, reply) => {
+    const text = request.params.text as string;
 
     try {
-      // Save the data to the database with "Cookies" as the key
-      await push(ref(database, `${contextRoute}/Cookies`), data);
-      reply.status(200).send({ message: "Cookies posted successfully" });
+      // Save the text to the database with "Cookies" as the key
+      await push(ref(database, `${contextRoute}/Cookies`), { text });
+
+      reply.status(200).send({ message: "Text saved successfully" });
     } catch (error) {
-      console.error("Error posting element: ", error);
-      reply.status(500).send({ error: "Failed to post element" });
+      console.error("Error saving text: ", error);
+      reply.status(500).send({ error: "Failed to save text" });
     }
   });
 };
